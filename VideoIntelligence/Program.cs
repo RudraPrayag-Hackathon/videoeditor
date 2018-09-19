@@ -20,7 +20,7 @@
             var client = VideoIntelligenceServiceClient.Create();
             var request = new AnnotateVideoRequest()
             {
-                InputContent = Google.Protobuf.ByteString.CopyFrom(File.ReadAllBytes(@"..\..\..\Videos\testInput.mp4")),
+                InputContent = Google.Protobuf.ByteString.CopyFrom(File.ReadAllBytes(@"..\..\..\Videos\InputVideo\testInput.mp4")),
                 Features = { Feature.LabelDetection }
             };
 
@@ -30,7 +30,7 @@
 
             string duration = (timeDetails.EndTime - timeDetails.StartTime).ToString();
 
-            VideoEditor.CutVideo(@"..\..\..\Videos\testInput.mp4", timeDetails.StartTime.ToString(), duration , @"..\..\..\Videos\vpOp.mp4");
+            VideoEditor.CutVideo(@"..\..\..\Videos\InputVideo\testInput.mp4", timeDetails.StartTime.ToString(), duration , @"..\..\..\Videos\OutputVideo\Output.mp4");
 
             Console.ReadKey();
 

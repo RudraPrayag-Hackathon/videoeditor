@@ -14,4 +14,8 @@
     <ProjectReference Include="..\VideoCutterApp\VideoCutterApp.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Videos\OutputVideo\" />
+  </ItemGroup>
+
 </Project>
