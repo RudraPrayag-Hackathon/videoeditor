@@ -10,6 +10,8 @@
     {
         static void Main()
         {
+            Console.WriteLine("Service is running.");
+
             String envName = "GOOGLE_APPLICATION_CREDENTIALS";
             String envValue = @"..\..\..\Credentials\json1.json";
 
@@ -31,6 +33,8 @@
             string duration = (timeDetails.EndTime - timeDetails.StartTime).ToString();
 
             VideoEditor.CutVideo(@"..\..\..\Videos\InputVideo\testInput.mp4", timeDetails.StartTime.ToString(), duration , @"..\..\..\Videos\OutputVideo\Output.mp4");
+
+            Console.WriteLine("Video is edited. Press key to exit.");
 
             Console.ReadKey();
 

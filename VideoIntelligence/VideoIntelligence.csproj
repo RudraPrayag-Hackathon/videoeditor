@@ -18,4 +18,13 @@
     <Folder Include="Videos\OutputVideo\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Credentials\json1.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Videos\InputVideo\testInput.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
