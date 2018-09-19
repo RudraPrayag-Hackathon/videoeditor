@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Cloud.VideoIntelligence.V1" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ConsumeJson\ConsumeJson.csproj" />
+    <ProjectReference Include="..\VideoCutterApp\VideoCutterApp.csproj" />
+  </ItemGroup>
+
+</Project>
