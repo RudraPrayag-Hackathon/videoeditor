@@ -11,7 +11,7 @@
         static void Main()
         {
             String envName = "GOOGLE_APPLICATION_CREDENTIALS";
-            String envValue = @"C:\Users\rekha.kulkarni\Downloads\json1.json";
+            String envValue = @"..\..\..\Credentials\json1.json";
 
             if (Environment.GetEnvironmentVariable(envName) == null)
 
@@ -20,7 +20,7 @@
             var client = VideoIntelligenceServiceClient.Create();
             var request = new AnnotateVideoRequest()
             {
-                InputContent = Google.Protobuf.ByteString.CopyFrom(File.ReadAllBytes(@"C:\Videos\testInput.mp4")),
+                InputContent = Google.Protobuf.ByteString.CopyFrom(File.ReadAllBytes(@"..\..\..\Videos\testInput.mp4")),
                 Features = { Feature.LabelDetection }
             };
 
@@ -30,7 +30,7 @@
 
             string duration = (timeDetails.EndTime - timeDetails.StartTime).ToString();
 
-            VideoEditor.CutVideo(@"C:\Videos\testInput.mp4", timeDetails.StartTime.ToString(), duration , @"C:\Videos\vpOp.mp4");
+            VideoEditor.CutVideo(@"..\..\..\Videos\testInput.mp4", timeDetails.StartTime.ToString(), duration , @"..\..\..\Videos\vpOp.mp4");
 
             Console.ReadKey();
 
